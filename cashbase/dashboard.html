@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Transactions</title>
+    <link href="cashbase_logo.ico" rel="icon" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .bg-custom-purple {
+        background-color: #2b2467;
+      }
+      .bg-custom-purple:hover {
+        background-color: #1b1740;
+      }
+      .text-custom-purple {
+        color: #2b2467;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <div class="flex flex-col md:flex-row">
+      <aside
+        id="sidebar"
+        class="w-full md:w-64 bg-white h-auto md:h-screen shadow-md p-6 transition-transform transform -translate-x-full md:translate-x-0"
+      >
+        <div class="text-center mb-8">
+          <img
+            src="https://i.pinimg.com/enabled_hi/564x/62/a2/88/62a28894d2ad0f7f0e000f5b9ca85b64.jpg"
+            alt="Profile"
+            class="w-20 h-20 rounded-full mx-auto mb-4"
+          />
+          <h2 class="text-xl font-bold">Shayna Anne</h2>
+          <p class="text-gray-500">shayna@anne.com</p>
+        </div>
+        <nav>
+          <ul class="space-y-8 flex flex-col mx-5">
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-3 text-gray-600 hover:text-custom-purple"
+              >
+                <span class="material-icons">dashboard</span>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li class="text-custom-purple">
+              <a href="#" class="flex items-center space-x-3">
+                <span class="material-icons">receipt</span>
+                <span>Transactions</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-3 text-gray-600 hover:text-custom-purple"
+              >
+                <span class="material-icons">message</span>
+                <span>Messages</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-3 text-gray-600 hover:text-custom-purple"
+              >
+                <span class="material-icons">credit_card</span>
+                <span>Card</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-3 text-gray-600 hover:text-custom-purple"
+              >
+                <span class="material-icons">stars</span>
+                <span>Rewards</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-3 text-gray-600 hover:text-custom-purple"
+              >
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-3 text-gray-600 hover:text-custom-purple"
+              >
+                <span class="material-icons">logout</span>
+                <span>Log Out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="md:hidden flex items-center p-4">
+        <button id="burger" class="focus:outline-none">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+      <div class="flex-1 p-6">
+        <h1 class="text-3xl font-bold mb-4">My Transactions</h1>
+        <p class="mb-4 text-gray-500">You've spent</p>
+        <div class="text-4xl font-semibold text-custom-purple mb-6">
+          Rp 4.518.000.500
+        </div>
+        <div class="flex space-x-4 mb-6 flex-wrap">
+          <button class="px-4 py-2 bg-custom-purple text-white rounded-full">
+            All Trx
+          </button>
+          <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-full">
+            Success
+          </button>
+          <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-full">
+            Pending
+          </button>
+          <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-full">
+            Failed
+          </button>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+          <table class="w-full text-left table-auto">
+            <thead>
+              <tr class="text-gray-600 bg-gray-100">
+                <th class="px-4 py-2">Game</th>
+                <th class="px-4 py-2">Item</th>
+                <th class="px-4 py-2">Price</th>
+                <th class="px-4 py-2">Status</th>
+                <th class="px-4 py-2">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="px-4 py-2 flex items-center">
+                  <img
+                    src="https://i.pinimg.com/enabled_hi/564x/c7/ae/66/c7ae66b1ac804a763ae892d16fa61d5d.jpg"
+                    alt="Game"
+                    class="w-12 h-12 rounded mr-4"
+                  />
+                  <div>
+                    <p>Fortnite</p>
+                    <p class="text-sm text-gray-500">PC</p>
+                  </div>
+                </td>
+                <td class="px-4 py-2">500 Gold</td>
+                <td class="px-4 py-2">Rp 600.000</td>
+                <td class="px-4 py-2">
+                  <span
+                    class="inline-block px-2 py-1 text-sm text-green-600 bg-green-100 rounded-full"
+                    >Completed</span
+                  >
+                </td>
+                <td class="px-4 py-2">
+                  <button
+                    class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2 flex items-center">
+                  <img
+                    src="https://i.pinimg.com/564x/43/c9/ad/43c9ada6903d7b11e1e0f31443f81504.jpg"
+                    alt="Game"
+                    class="w-12 h-12 rounded mr-4"
+                  />
+                  <div>
+                    <p>Among Us</p>
+                    <p class="text-sm text-gray-500">Mobile</p>
+                  </div>
+                </td>
+                <td class="px-4 py-2">100 Gold</td>
+                <td class="px-4 py-2">Rp 150.000</td>
+                <td class="px-4 py-2">
+                  <span
+                    class="inline-block px-2 py-1 text-sm text-green-600 bg-green-100 rounded-full"
+                    >Completed</span
+                  >
+                </td>
+                <td class="px-4 py-2">
+                  <button
+                    class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2 flex items-center">
+                  <img
+                    src="https://i.pinimg.com/enabled_hi/564x/27/f6/12/27f612230d8e16a14e95f6368b2b5cf0.jpg"
+                    alt="Game"
+                    class="w-12 h-12 rounded mr-4"
+                  />
+                  <div>
+                    <p>Apex Legends</p>
+                    <p class="text-sm text-gray-500">PC</p>
+                  </div>
+                </td>
+                <td class="px-4 py-2">200 Gold</td>
+                <td class="px-4 py-2">Rp 350.000</td>
+                <td class="px-4 py-2">
+                  <span
+                    class="inline-block px-2 py-1 text-sm text-orange-600 bg-orange-100 rounded-full"
+                    >Pending</span
+                  >
+                </td>
+                <td class="px-4 py-2">
+                  <button
+                    class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2 flex items-center">
+                  <img
+                    src="https://i.pinimg.com/enabled_hi/564x/a9/f8/a7/a9f8a7579fc1f8ef96c3c11a61cb7970.jpg"
+                    alt="Game"
+                    class="w-12 h-12 rounded mr-4"
+                  />
+                  <div>
+                    <p>Roblox</p>
+                    <p class="text-sm text-gray-500">Mobile</p>
+                  </div>
+                </td>
+                <td class="px-4 py-2">250 Gold</td>
+                <td class="px-4 py-2">Rp 200.000</td>
+                <td class="px-4 py-2">
+                  <span
+                    class="inline-block px-2 py-1 text-sm text-green-600 bg-green-100 rounded-full"
+                    >Completed</span
+                  >
+                </td>
+                <td class="px-4 py-2">
+                  <button
+                    class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2 flex items-center">
+                  <img
+                    src="https://i.pinimg.com/enabled_hi/736x/e5/4c/e0/e54ce02b8b29277d9e7275c5b5af5b0e.jpg"
+                    alt="Game"
+                    class="w-12 h-12 rounded mr-4"
+                  />
+                  <div>
+                    <p>Genshin Impact</p>
+                    <p class="text-sm text-gray-500">Mobile</p>
+                  </div>
+                </td>
+                <td class="px-4 py-2">200 Gold</td>
+                <td class="px-4 py-2">Rp 270.000</td>
+                <td class="px-4 py-2">
+                  <span
+                    class="inline-block px-2 py-1 text-sm text-orange-600 bg-orange-100 rounded-full"
+                    >Pending</span
+                  >
+                </td>
+                <td class="px-4 py-2">
+                  <button
+                    class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-4 py-2 flex items-center">
+                  <img
+                    src="https://i.pinimg.com/736x/51/6a/74/516a74d6d701c86c007f668d7cf2891a.jpg"
+                    alt="Game"
+                    class="w-12 h-12 rounded mr-4"
+                  />
+                  <div>
+                    <p>PUBG Mobile</p>
+                    <p class="text-sm text-gray-500">Mobile</p>
+                  </div>
+                </td>
+                <td class="px-4 py-2">300 Gold</td>
+                <td class="px-4 py-2">Rp 370.000</td>
+                <td class="px-4 py-2">
+                  <span
+                    class="inline-block px-2 py-1 text-sm text-orange-600 bg-orange-100 rounded-full"
+                    >Pending</span
+                  >
+                </td>
+                <td class="px-4 py-2">
+                  <button
+                    class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    Details
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const burgerButton = document.getElementById("burger");
+      const sidebar = document.getElementById("sidebar");
+
+      burgerButton.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+      });
+    </script>
+  </body>
+</html>
