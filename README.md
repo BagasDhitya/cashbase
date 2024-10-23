@@ -13,3 +13,8 @@ CashBase is a web platform where you can get your favorite game vouchers at disc
 
 - **HTML**: For the structure of the website.
 - **TailwindCSS**: For styling the website with a modern, responsive design.
+
+## Access Links
+
+- **Admin Dashboard**: You can access the admin dashboard at [https://cashbase.vercel.app/cashbase/dashboard.html](https://cashbase.vercel.app/cashbase/dashboard.html).
+- **Landing Page**: The landing page can be found at [https://cashbase.vercel.app/cashbase/main.html](https://cashbase.vercel.app/cashbase/main.html).
